@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Sproutix (SPX)</title>
+  <link rel="icon" href="logo.png" />
+  <meta name="description" content="Terms of Service for Sproutix (SPX) — the farming Mini App on TON." />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: #f1f1f1;
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      padding: 2.5rem 1rem 2rem;
+      background: linear-gradient(135deg, #10b981, #2563eb);
+      text-align: center;
+      border-bottom: 3px solid #1e40af;
+    }
+    .header a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 1.2rem;
+      transition: color 0.2s;
+    }
+    .header a:hover { color: #fff; }
+    .logo {
+      width: 80px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0,255,157,0.5);
+      display: block;
+      margin: 0 auto 0.8rem;
+    }
+    .header h1 { font-size: 2rem; color: #fff; }
+    .header p  { color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-top: 0.3rem; }
+
+    /* ── BADGE ── */
+    .badge-bar {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 0.9rem 1rem;
+      background: #111;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .badge {
+      background: #1f2937;
+      border: 1px solid #22c55e;
+      color: #22c55e;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    /* ── TABLE OF CONTENTS ── */
+    .toc {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-left: 4px solid #22c55e;
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 3rem;
+    }
+    .toc h3 {
+      color: #22c55e;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.8rem;
+    }
+    .toc ol { padding-left: 1.2rem; }
+    .toc li { margin: 0.3rem 0; }
+    .toc a {
+      color: #a1a1aa;
+      text-decoration: none;
+      font-size: 0.92rem;
+      transition: color 0.2s;
+    }
+    .toc a:hover { color: #22c55e; }
+
+    /* ── SECTIONS ── */
+    .policy-section {
+      margin-bottom: 2.8rem;
+      scroll-margin-top: 20px;
+    }
+    .policy-section h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.3rem;
+      color: #22c55e;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .policy-section h2 .num {
+      background: #22c55e;
+      color: #000;
+      font-size: 0.75rem;
+      font-weight: 700;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .policy-section h3 {
+      font-size: 1rem;
+      color: #d1d5db;
+      margin: 1.2rem 0 0.5rem;
+    }
+    .policy-section p {
+      color: #ccc;
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    /* ── INFO CARD ── */
+    .info-card {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 10px;
+      padding: 1.4rem 1.6rem;
+      margin: 1rem 0;
+    }
+    .info-card.green  { border-left: 4px solid #22c55e; }
+    .info-card.blue   { border-left: 4px solid #3b82f6; }
+    .info-card.yellow { border-left: 4px solid #f59e0b; }
+    .info-card.red    { border-left: 4px solid #ef4444; }
+
+    /* ── LISTS ── */
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0;
+    }
+    .check-list li {
+      color: #ccc;
+      padding: 0.3rem 0 0.3rem 1.6rem;
+      position: relative;
+      font-size: 0.97rem;
+    }
+    .check-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #22c55e;
+      font-weight: 700;
+    }
+    .ban-list li::before { content: '🚫'; font-style: normal; }
+
+    /* ── REQUIREMENT TABLE ── */
+    .req-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .req-card {
+      background: #111;
+      border: 1px solid #1e1e1e;
+      border-radius: 10px;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .req-card .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    .req-card strong { display: block; color: #22c55e; margin-bottom: 0.3rem; }
+    .req-card span { font-size: 0.88rem; color: #a1a1aa; }
+
+    /* ── CONTACT BOX ── */
+    .contact-box {
+      background: linear-gradient(135deg, #10b98120, #2563eb20);
+      border: 1px solid #22c55e40;
+      border-radius: 12px;
+      padding: 1.8rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .contact-box p { color: #ccc; margin-bottom: 1rem; }
+    .contact-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .contact-links a {
+      text-decoration: none;
+      background: #1f2937;
+      color: #fff;
+      padding: 0.6rem 1.3rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid #22c55e;
+      transition: all 0.25s;
+    }
+    .contact-links a:hover { background: #22c55e; color: #000; }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 1.5rem;
+      border-top: 1px solid #1e1e1e;
+      color: #555;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    footer a { color: #22c55e; text-decoration: none; }
+
+    /* ── META BAR ── */
+    .meta-bar {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      color: #555;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #1e1e1e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a href="index.html">← Back to Sproutix</a>
+    <img src="logo.png" class="logo" alt="Sproutix logo" />
+    <h1>Terms of Service</h1>
+    <p>Sproutix (SPX) — Telegram Mini App on TON</p>
+  </header>
+
+  <!-- BADGES -->
+  <div class="badge-bar">
+    <span class="badge">📋 Legal Agreement</span>
+    <span class="badge">🤖 Telegram Mini App</span>
+    <span class="badge">⛓️ TON Blockchain</span>
+    <span class="badge">📅 Updated: October 14, 2026</span>
+  </div>
+
+  <main class="container">
+
+    <!-- META -->
+    <div class="meta-bar">
+      <span>📅 Effective Date: October 14, 2026</span>
+      <span>🔄 Last Updated: October 14, 2026</span>
+      <span>📌 Version: 1.0</span>
+    </div>
+
+    <!-- INTRO -->
+    <div class="info-card yellow" style="margin-bottom:2.5rem;">
+      <p>By accessing or using <strong>SPX Farm</strong> through <a href="https://t.me/SpxofficialBot" target="_blank" style="color:#22c55e;">@SpxofficialBot</a>, you confirm that you have read, understood, and agreed to these Terms of Service and our <a href="privacy.html" style="color:#22c55e;">Privacy Policy</a>.</p>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+      <h3>📋 Table of Contents</h3>
+      <ol>
+        <li><a href="#s1">Acceptance of Terms</a></li>
+        <li><a href="#s2">Description of Service</a></li>
+        <li><a href="#s3">In-Game Economy</a></li>
+        <li><a href="#s4">Purchases & Payments</a></li>
+        <li><a href="#s5">Referral Program</a></li>
+        <li><a href="#s6">Prohibited Conduct</a></li>
+        <li><a href="#s7">Intellectual Property</a></li>
+        <li><a href="#s8">Disclaimers & Limitation of Liability</a></li>
+        <li><a href="#s9">Service Availability</a></li>
+        <li><a href="#s10">Changes to Terms</a></li>
+        <li><a href="#s11">Governing Law</a></li>
+        <li><a href="#s12">Contact</a></li>
+      </ol>
+    </div>
+
+    <!-- SECTION 1 -->
+    <section class="policy-section" id="s1">
+      <h2><span class="num">1</span> Acceptance of Terms</h2>
+      <p>By accessing SPX Farm through <a href="https://t.me/SpxofficialBot" target="_blank" style="color:#22c55e;">@SpxofficialBot</a>, you confirm that you:</p>
+      <div class="info-card green">
+        <ul class="check-list">
+          <li>Are at least <strong>13 years of age</strong></li>
+          <li>Have read, understood, and agree to these Terms</li>
+          <li>Agree to our <a href="privacy.html" style="color:#22c55e;">Privacy Policy</a></li>
+          <li>Understand that SPX tokens are not financial instruments or investments</li>
+        </ul>
+      </div>
+      <p>If you do not agree to these Terms, please discontinue use of the application immediately.</p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="policy-section" id="s2">
+      <h2><span class="num">2</span> Description of Service</h2>
+      <p><strong>SPX Farm</strong> is a Telegram-based farming game where users manage a virtual farm, raise animals, grow crops, and earn SPX tokens on the TON blockchain. The service is provided through Telegram's Mini App (WebApp) platform.</p>
+      <div class="info-card blue">
+        <ul class="check-list">
+          <li>Manage virtual farms — chickens, cows, and crop fields</li>
+          <li>Earn Gold Coins through gameplay and convert them to SPX</li>
+          <li>Withdraw SPX tokens to a TON blockchain wallet (subject to requirements)</li>
+          <li>Participate in a referral reward program</li>
+          <li>Purchase upgrades with Telegram Stars or TON</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="policy-section" id="s3">
+      <h2><span class="num">3</span> In-Game Economy</h2>
+
+      <h3>3.1 Gold Coins</h3>
+      <p>Gold Coins are the primary in-game currency earned through gameplay (collecting eggs, milk, and harvested crops). They can be spent in the in-game shop or exchanged for SPX tokens.</p>
+      <div class="info-card red">
+        <p>⚠️ Gold Coins have <strong>no monetary value</strong> outside the game and cannot be directly withdrawn or traded.</p>
+      </div>
+
+      <h3>3.2 SPX Tokens</h3>
+      <p>SPX is the reward token of the SPX Farm ecosystem, deployed on the TON blockchain. It can be earned, deposited, and withdrawn to a TON wallet.</p>
+      <div class="info-card yellow">
+        <p>⚠️ <strong>SPX tokens are experimental digital assets.</strong> Their value is not guaranteed. We make no representations about their current or future market value. Participation is entirely at your own risk.</p>
+      </div>
+
+      <h3>3.3 Withdrawal Requirements</h3>
+      <p>To be eligible for SPX token withdrawal, all of the following must be met:</p>
+      <div class="req-grid">
+        <div class="req-card">
+          <div class="icon">💎</div>
+          <strong>1 SPX Minimum</strong>
+          <span>Minimum withdrawal amount</span>
+        </div>
+        <div class="req-card">
+          <div class="icon">👥</div>
+          <strong>10 Referrals</strong>
+          <span>Must have referred at least 10 friends</span>
+        </div>
+        <div class="req-card">
+          <div class="icon">🐔</div>
+          <strong>Golden Wyandotte</strong>
+          <span>Must own the 5 TON golden chicken</span>
+        </div>
+        <div class="req-card">
+          <div class="icon">👛</div>
+          <strong>TON Wallet</strong>
+          <span>Valid wallet connected via TON Connect</span>
+        </div>
+      </div>
+      <p>We reserve the right to modify withdrawal requirements with prior notice to users.</p>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section class="policy-section" id="s4">
+      <h2><span class="num">4</span> Purchases & Payments</h2>
+
+      <h3>4.1 Telegram Stars</h3>
+      <div class="info-card blue">
+        <p>Purchases of Silver Pots (1 ⭐) and Gold Pots (5 ⭐) are processed via <strong>Telegram Stars</strong> — Telegram's official in-app payment system. All Stars transactions are subject to <a href="https://telegram.org/tos" target="_blank" style="color:#22c55e;">Telegram's Terms of Service</a>. <strong>Telegram Stars purchases are non-refundable</strong> once the virtual item has been credited to your account.</p>
+      </div>
+
+      <h3>4.2 TON Payments</h3>
+      <div class="info-card blue">
+        <p>The Golden Wyandotte chicken is purchasable for <strong>5 TON</strong> via TON Connect. TON blockchain transactions are <strong>irreversible and non-refundable</strong>. By initiating a TON transaction, you acknowledge that funds will be permanently transferred on-chain.</p>
+      </div>
+
+      <h3>4.3 Digital Goods Policy</h3>
+      <p>All in-game items (chickens, cows, pots, workers) are virtual digital goods. They:</p>
+      <div class="info-card red">
+        <ul class="check-list cross-list" style="list-style:none;">
+          <li style="padding-left:1.6rem; position:relative; color:#ccc; margin:0.3rem 0;" class="">Have no tangible or monetary value outside the game</li>
+          <li style="padding-left:1.6rem; position:relative; color:#ccc; margin:0.3rem 0;">Cannot be transferred between accounts</li>
+          <li style="padding-left:1.6rem; position:relative; color:#ccc; margin:0.3rem 0;">May be altered or discontinued at our discretion</li>
+          <li style="padding-left:1.6rem; position:relative; color:#ccc; margin:0.3rem 0;">Are not eligible for cash refunds after purchase</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section class="policy-section" id="s5">
+      <h2><span class="num">5</span> Referral Program</h2>
+      <div class="info-card green">
+        <ul class="check-list">
+          <li><strong>Referral commission:</strong> 10% of all coins produced by your referred users</li>
+          <li>Commissions accumulate in real-time and can be claimed at any time</li>
+          <li>Referral relationships are permanent and cannot be changed or transferred</li>
+          <li>200 SPX bonus is credited to the referrer upon each new user joining</li>
+        </ul>
+      </div>
+      <div class="info-card red">
+        <p>⚠️ We reserve the right to <strong>void referral commissions</strong> and <strong>ban accounts</strong> if we detect fraudulent activity, including but not limited to: use of fake accounts, bots, self-referrals, or coordinated abuse of the referral system.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section class="policy-section" id="s6">
+      <h2><span class="num">6</span> Prohibited Conduct</h2>
+      <p>You agree <strong>NOT</strong> to engage in any of the following:</p>
+      <div class="info-card red">
+        <ul class="check-list ban-list">
+          <li>Use bots, scripts, or automation tools to manipulate game mechanics</li>
+          <li>Exploit bugs, glitches, or vulnerabilities to gain unfair advantages</li>
+          <li>Create multiple accounts to abuse the referral or bonus system</li>
+          <li>Impersonate other users, SPX Farm staff, or Telegram</li>
+          <li>Interfere with or disrupt the normal operation of the service or servers</li>
+          <li>Attempt to reverse-engineer, decompile, or modify the application</li>
+          <li>Use the service for any illegal purpose under applicable law</li>
+        </ul>
+      </div>
+      <p>Violation of these rules may result in immediate account suspension or permanent ban without refund of any purchased items or token balances.</p>
+    </section>
+
+    <!-- SECTION 7 -->
+    <section class="policy-section" id="s7">
+      <h2><span class="num">7</span> Intellectual Property</h2>
+      <p>All content within SPX Farm — including artwork, animations, sound effects, music, logos, game mechanics, and code — is the intellectual property of Sproutix and its creators.</p>
+      <div class="info-card yellow">
+        <p>You may not reproduce, distribute, publicly display, or create derivative works from any SPX Farm content without <strong>express written permission</strong> from the Sproutix team.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 8 -->
+    <section class="policy-section" id="s8">
+      <h2><span class="num">8</span> Disclaimers & Limitation of Liability</h2>
+
+      <h3>8.1 "As Is" Basis</h3>
+      <div class="info-card yellow">
+        <p>SPX Farm is provided on an <strong>"as is" and "as available"</strong> basis. We make no warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not guarantee uninterrupted, error-free operation.</p>
+      </div>
+
+      <h3>8.2 Financial Disclaimer</h3>
+      <div class="info-card red">
+        <p>⚠️ <strong>SPX tokens are not financial instruments, securities, or investment products.</strong> Nothing in this app constitutes financial advice. We are not responsible for any loss of funds due to market volatility, failed blockchain transactions, TON network issues, wallet errors, or user mistakes.</p>
+      </div>
+
+      <h3>8.3 Limitation of Liability</h3>
+      <p>To the maximum extent permitted by applicable law, Sproutix and its developers shall not be liable for any indirect, incidental, special, consequential, or punitive damages — including loss of profits, data, SPX tokens, or goodwill — arising from your use of the service.</p>
+    </section>
+
+    <!-- SECTION 9 -->
+    <section class="policy-section" id="s9">
+      <h2><span class="num">9</span> Service Availability</h2>
+      <p>We aim to maintain high availability but cannot guarantee uninterrupted service. We reserve the right to:</p>
+      <div class="info-card blue">
+        <ul class="check-list">
+          <li>Perform scheduled maintenance that may temporarily suspend service</li>
+          <li>Modify, update, or discontinue any feature or mechanic</li>
+          <li>Shut down the service with reasonable notice to registered users</li>
+          <li>Adjust game economy parameters (exchange rates, timers, prices) at any time</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 10 -->
+    <section class="policy-section" id="s10">
+      <h2><span class="num">10</span> Changes to Terms</h2>
+      <p>We may update these Terms at any time. <strong>Continued use of SPX Farm after changes are published constitutes acceptance of the revised Terms.</strong></p>
+      <p>Major changes will be announced in advance via the <a href="https://t.me/miningspxofficial" target="_blank" style="color:#22c55e;">@miningspxofficial</a> Telegram channel.</p>
+    </section>
+
+    <!-- SECTION 11 -->
+    <section class="policy-section" id="s11">
+      <h2><span class="num">11</span> Governing Law</h2>
+      <p>These Terms are governed by applicable international laws. Any disputes arising from these Terms shall first be resolved through good-faith negotiation. If unresolved, disputes shall be submitted to binding arbitration in accordance with internationally recognized arbitration rules.</p>
+    </section>
+
+    <!-- SECTION 12 -->
+    <section class="policy-section" id="s12">
+      <h2><span class="num">12</span> Contact</h2>
+      <p>For questions, support, or legal inquiries regarding these Terms:</p>
+      <div class="contact-box">
+        <p>Our team responds within 48 hours via Telegram.</p>
+        <div class="contact-links">
+          <a href="https://t.me/miningspxofficial" target="_blank">📢 Telegram Channel</a>
+          <a href="https://t.me/SpxofficialBot" target="_blank">🤖 Open Bot</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      © 2026 Sproutix — Built on TON 🌐 &nbsp;|&nbsp;
+      <a href="index.html">Home</a> &nbsp;|&nbsp;
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+  </footer>
+
+</body>
+</html>
